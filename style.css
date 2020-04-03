@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.imgContainer{
+    width: 400px;
+    height:300px;
+    background-color: #ccc;
+    margin: 10px;
+}
+#img1{
+    width: 400px;
+    height:300px;
+    /* object-fit:none; */
+}
+#img2{
+    width: 400px;
+    height:300px;
+    /* object-fit:contain; */
+}
+#img3{
+    width: 400px;
+    height:300px;
+    /* object-fit:fill; */
+}
