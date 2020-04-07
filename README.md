@@ -1,5 +1,5 @@
 # Fit and Fill
-I created a class named ImgDom. Users could create an intance of the class to generate an image and use scaleToFit() and scaleToFill() to re-scale the image.
+I created a class named ImgDom. Users could create an instance of the class to generate an image and use scaleToFit() and scaleToFill() to re-scale the image.
 
 
 ## Demo
@@ -23,6 +23,7 @@ To use ImgDom class,
 **1. In main.js, import ImgDom, create an instance and pass an image path as the first parameter**
 
 `    import ImgDom from "./ImgDom.js";`
+
 `    let img1 = new ImgDom("./images/img1.jpg");`
 
 **2. Use appendTo() method and pass an id name as the first parameter to set the position of the image.**
@@ -33,6 +34,7 @@ To use ImgDom class,
 **3. Use scaleToFit() and scaleToFill() to re-scale the image.**
 
 `    img1.scaleToFit();`
+
 `    img1.scaleToFill();`
 
 **4. You could use scaleToReset() to re-scale image to default.**
