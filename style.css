@@ -1,11 +1,37 @@
+span{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 4px 8px;
+    color:grey
+}
+
+#btnGroup{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+button{
+    cursor: pointer;
+    background-color: white;
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 0px;
+    margin: 10px 10px;
+}
+
 .container{
+    width: auto;
     display: flex;
     flex-wrap: wrap;
 }
+
 .imgContainer{
+    position: relative;
     width: 400px;
     height:360px;
-    background-color: #ccc;
+    background-color: #ddd;
     margin: 5px;
 }
 #img1, #img2, #img3 {

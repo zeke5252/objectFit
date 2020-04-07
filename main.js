@@ -1,49 +1,29 @@
-class ImgDom {
-  constructor(src) {
-    this.img = document.createElement("img");
-    this.setSrc(src);
-    this.setFit("none");
-    this.img.setAttribute("class", "img");
-  }
-  scaleToFit() {
-    this.setFit("contain");
-  }
-  scaleToFill() {
-    this.setFit("fill");
-  }
-  scaleToReset() {
-    this.setFit("none");
-  }
-  setFit(method) {
-    this.img.style.objectFit = method;
-  }
-  setPosition(id) {
-    document.getElementById(id).appendChild(this.img);
-  }
-  setSrc(src) {
-    try {
-      if (src) {
-        this.img.src = src;
-      } else {
-        throw "Invalid src";
-      }
-    } catch (e) {
-      console.log(e);
-    }
-  }
-}
+import ImgDom from "./ImgDom.js";
 
-(function init() {
+init();
+
+function init() {
   try {
-    let img1 = new ImgDom("./images/img1.jpg");
-    let img2 = new ImgDom("./images/img2.jpg");
-    let img3 = new ImgDom("./images/img3.jpg");
-    img1.setPosition("imgDonContainer1");
+    let img1 = new ImgDom("./images/img.jpg");
+    let img2 = new ImgDom("./images/img.jpg");
+    let img3 = new ImgDom("./images/img.jpg");
+    let img4 = new ImgDom("./images/img.jpg");
+    img1.appendTo("imgDonContainer1");
     img2.scaleToFit();
-    img2.setPosition("imgDonContainer2");
+    img2.appendTo("imgDonContainer2");
     img3.scaleToFill();
-    img3.setPosition("imgDonContainer3");
+    img3.appendTo("imgDonContainer3");
+    img4.appendTo("imgDonContainer4");
+    document.getElementById('btnFill').addEventListener('click', ()=>{
+      img4.scaleToFill()
+    })
+    document.getElementById('btnFit').addEventListener('click', ()=>{
+      img4.scaleToFit()
+    })
+    document.getElementById('btnNone').addEventListener('click', ()=>{
+      img4.scaleToReset()
+    })
   } catch (e) {
     console.log(e.message);
   }
-})();
+}
